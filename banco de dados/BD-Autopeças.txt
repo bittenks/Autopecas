@@ -14,3 +14,26 @@ create table cliente(
     estadoCliente char(2) not null,
     cepCliente varchar(10) not null
 );
+ALTER TABLE `autopecas`.`cliente` 
+ADD COLUMN `limite_creditoCliente` FLOAT NULL AFTER `cepCliente`;
+
+create table produto(
+    idProduto int(4) auto_increment not null primary key,
+    nomeProduto varchar(50) not null,
+    descricaoProduto varchar(150) not null,
+    quantidadeProduto int(10) not null,
+    valorProduto decimal(10,2) not null,
+    categoriaProduto varchar(50) not null,
+    marcaProduto varchar (50) not null
+);
+
+create table usuario(
+    idUsuario int(4) auto_increment not null primary key,
+    nomeUsuario varchar(50) not null,
+    cpfUsuario varchar(14) not null,
+    enderecoUsuario varchar(100) not null,
+    telUsuario varchar(15) not null,
+    emailUsuario varchar(50) not null,
+    senhaUsuario varchar(15) not null,
+    funcaoUsuario varchar(15) not null
+);
