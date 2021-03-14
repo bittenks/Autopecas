@@ -2,7 +2,7 @@ create database autopecas;
 use autopecas;
 
 create table cliente(
-    idCliente int(4) auto_increment not null primary key,
+	idCliente int(4) auto_increment not null primary key,
     nomeCliente varchar(50) not null, 
     cpfCliente varchar(14) not null,
     emailCliente varchar(50),
@@ -12,19 +12,8 @@ create table cliente(
     bairroCliente varchar(50) not null,
     cidadeCliente varchar(50) not null,
     estadoCliente char(2) not null,
-    cepCliente varchar(10) not null
-);
-ALTER TABLE `autopecas`.`cliente` 
-ADD COLUMN `limite_creditoCliente` FLOAT NULL AFTER `cepCliente`;
-
-create table produto(
-    idProduto int(4) auto_increment not null primary key,
-    nomeProduto varchar(50) not null,
-    descricaoProduto varchar(150) not null,
-    quantidadeProduto int(10) not null,
-    valorProduto decimal(10,2) not null,
-    categoriaProduto varchar(50) not null,
-    marcaProduto varchar (50) not null
+    cepCliente varchar(10) not null,
+    limite_creditoCliente float(10,2)
 );
 
 create table usuario(
@@ -36,4 +25,27 @@ create table usuario(
     emailUsuario varchar(50) not null,
     senhaUsuario varchar(15) not null,
     funcaoUsuario varchar(15) not null
+);
+
+create table produto(
+	idProduto int(4) auto_increment not null primary key,
+    nomeProduto varchar(50) not null,
+    descricaoProduto varchar(150) not null,
+    quantidadeProduto int(10) not null,
+    valorProduto decimal(10,2) not null,
+    categoriaProduto varchar(50) not null,
+    marcaProduto varchar (50) not null,
+    fk_produto_categProd int(5),
+    fk_marcaProd int(4),
+    foreign key (fk_produto_categProd) references categoriaProd (idcategoriaProd),
+    foreign key (fk_marcaProd) references marcaProd (idmarcaProd)
+);
+
+create table categoriaProd(
+	idcategoriaProd int(4) auto_increment primary key,
+    descricaoCatProd varchar(45)   
+);
+create table marcaProd(
+	idmarcaProd int(4) auto_increment not null primary key,
+    descricao varchar(45) 
 );
