@@ -3,6 +3,9 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
   <Properties>
     <Property name="closable" type="boolean" value="true"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1360, 898]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -25,98 +28,123 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="126" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtNomeCliente" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="txtTelefoneCliente" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtCpfCliente" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtIdCliente" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="txtEmailCliente" min="-2" pref="319" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Component id="txtEnderecoCliente" min="-2" pref="319" max="-2" attributes="0"/>
+                                          <Component id="btnNovoCliente" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="btnSalvarCliente" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="btnCancelar" min="-2" pref="100" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="188" pref="188" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="422" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                      <Component id="btnAlterarCliente" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnExcluirCliente" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="txtNumeroCliente" max="32767" attributes="0"/>
-                                  <Component id="txtCidadeCliente" max="32767" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnNovoCliente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnSalvarCliente" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTelefoneCliente" max="32767" attributes="0"/>
+                                  <Component id="txtCpfCliente" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtEmailCliente" pref="800" max="32767" attributes="0"/>
+                                  <Component id="txtEnderecoCliente" max="32767" attributes="0"/>
+                                  <Component id="txtBairroCliente" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="txtCidadeCliente" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtEstadoCliente" min="-2" pref="250" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="291" max="-2" attributes="0"/>
+                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="504" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtBairroCliente" min="-2" pref="319" max="-2" attributes="0"/>
-                                          <Component id="txtEstadoCliente" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtCepCliente" max="32767" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="btnBuscar" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btnAlterarCliente" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btnExcluirCliente" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="txtCepCliente" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="txtLimiteCreditoCliente" min="-2" pref="505" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtLimiteCreditoCliente" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="484" max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtIdCliente" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="347" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -124,64 +152,68 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="txtIdCliente" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jLabel19" min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtEstadoCliente" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="txtIdCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtNomeCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEmailCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTelefoneCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEnderecoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtNumeroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtBairroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtCidadeCliente" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCepCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtNomeCliente" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtEmailCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCpfCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtEnderecoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTelefoneCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtNumeroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBairroCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtCidadeCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstadoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCepCliente" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
@@ -190,14 +222,21 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnNovoCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnSalvarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnAlterarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSalvarCliente" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAlterarCliente" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="btnExcluirCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCancelar" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="380" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -206,6 +245,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="C&#xf3;digo"/>
       </Properties>
     </Component>
@@ -221,16 +263,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Nome"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtCpfCliente">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CPF"/>
       </Properties>
     </Component>
@@ -241,6 +284,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Email"/>
       </Properties>
     </Component>
@@ -251,6 +297,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
       </Properties>
     </Component>
@@ -261,21 +310,25 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Telefone"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtTelefoneCliente">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Bairro"/>
       </Properties>
     </Component>
@@ -286,6 +339,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cidade"/>
       </Properties>
     </Component>
@@ -296,6 +352,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Estado"/>
       </Properties>
     </Component>
@@ -306,17 +365,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CEP"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtCepCliente">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnNovoCliente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Novo"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/novo.png"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNovoClienteActionPerformed"/>
@@ -324,7 +383,13 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSalvarCliente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Salvar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/salvar.png"/>
+        </Property>
+        <Property name="alignmentY" type="float" value="0.0"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Padr&#xe3;o"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -333,7 +398,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAlterarCliente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Alterar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/alterar.png"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -342,7 +409,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnExcluirCliente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Excluir"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/excluir.png"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
@@ -352,35 +421,29 @@
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="36" style="1"/>
+          <Font name="Arial" size="36" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Clientes"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Limite de Cr&#xe9;dito"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLimiteCreditoCliente">
+    <Component class="javax.swing.JButton" name="btnCancelar">
       <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnBuscar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/cancelar.png"/>
+        </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnCancelar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
@@ -407,5 +470,88 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JFormattedTextField" name="txtCpfCliente">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+          <Format format="###.###.###-##" subtype="-1" type="5"/>
+        </Property>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtTelefoneCliente">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+          <Format format="(##)#####-####" subtype="-1" type="5"/>
+        </Property>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtLimiteCreditoCliente">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Novo Cliente"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel15">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="btnSalvarCliente"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Padr&#xe3;o"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel16">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel17">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Alterar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel19">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/clientepainel.png"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtCepCliente">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+          <Format format="##.###-###" subtype="-1" type="5"/>
+        </Property>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
