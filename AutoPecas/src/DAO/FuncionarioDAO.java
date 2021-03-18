@@ -90,4 +90,22 @@ public class FuncionarioDAO {
         return listaFuncionarios;
     
     } 
+    
+    public Funcionario buscaLogin( String emailUsuario, String senhaUsuario) throws SQLException{
+        //sql = "Select * from usuario where emailUsuario COLLATE utf8_bin=? and senhaUsuario COLLATE utf8_bin=?";
+        sql = "Select * from usuario where emailUsuario COLLATE utf8mb4_bin=? and senhaUsuario COLLATE utf8mb4_bin=?";
+        Funcionario funcionario= null;
+        pst= Conexao.getInstance().prepareStatement(sql);
+        pst.setString(1, emailUsuario);
+        pst.setString(2, senhaUsuario);
+        pst.executeQuery();
+        ResultSet rs = pst.getResultSet();
+        while (rs.next()){
+            funcionario = new Funcionario (rs.getInt("idUsuario"), rs.getString("nomeUsuario"), rs.getString("cpfUsuario"),rs.getString("EnderecoUsuario"),
+                    rs.getString("telUsuario"), rs.getString("emailUsuario"), rs.getString("senhaUsuario"), rs.getString("funcaoUsuario"));
+        }
+        pst.close();
+        return funcionario;
+    }
+    
 }

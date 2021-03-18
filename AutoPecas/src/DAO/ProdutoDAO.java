@@ -5,12 +5,17 @@
  */
 package DAO;
 
+import Model.Categoria;
+import Model.Marca;
 import Model.Produto;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,6 +25,9 @@ public class ProdutoDAO {
     
     PreparedStatement pst;
     String sql;
+    MarcaDAO marcaDAO;    
+    CategoriaDAO categoriaDAO;
+    
     
     public void salvar(Produto produto) throws SQLException{
         
@@ -30,8 +38,8 @@ public class ProdutoDAO {
         pst.setString(3, produto.getDescricaoProduto());
         pst.setInt(4, produto.getQuantidadeProduto());
         pst.setFloat(5, produto.getValorProduto());
-        pst.setString(6, produto.getCategoriaProduto());
-        pst.setString(7, produto.getMarcaProduto());
+        pst.setInt(6, produto.getCategoriaProduto().getIdCategoriaProd());
+        pst.setInt(7, produto.getMarcaProduto().getIdmarcaProd());
        
         pst.execute();
         pst.close();
@@ -55,8 +63,8 @@ public class ProdutoDAO {
         pst.setString(3, produto.getDescricaoProduto());
         pst.setInt(4, produto.getQuantidadeProduto());
         pst.setFloat(5, produto.getValorProduto());
-        pst.setString(6, produto.getCategoriaProduto());
-        pst.setString(7, produto.getMarcaProduto());
+        pst.setInt(6, produto.getCategoriaProduto().getIdCategoriaProd());
+        pst.setInt(7, produto.getMarcaProduto().getIdmarcaProd());
        
         pst.execute();
         pst.close();
@@ -67,9 +75,11 @@ public class ProdutoDAO {
         pst = Conexao.getInstance().prepareStatement(sql);
         ResultSet rs = pst.executeQuery();
         Produto pro = null;
+        categoriaDAO = new CategoriaDAO();
         while (rs.next()){
             pro = new Produto(rs.getInt("idProduto"), rs.getString("nomeProduto"), rs.getString("descricaoProduto"),rs.getInt("quantidadeProduto"),
-                    rs.getFloat("valorProduto"), rs.getString("categoriaProduto"), rs.getString("marcaProduto"));
+                    rs.getFloat("valorProduto"), categoriaDAO.ListaCategoriaPorCodigo(rs.getInt("categoriaProduto")));
+            
         }
         pst.close();
         return pro;
@@ -81,12 +91,17 @@ public class ProdutoDAO {
         sql = "select * from produto order by nomeProduto";
         pst = Conexao.getInstance().prepareStatement(sql);
         ResultSet rs = pst.executeQuery();
+        categoriaDAO = new CategoriaDAO();
         while (rs.next()){
             listaProdutos.add(new Produto(rs.getInt("idProduto"), rs.getString("nomeProduto"), rs.getString("descricaoProduto"),rs.getInt("quantidadeProduto"),
-                    rs.getFloat("valorProduto"), rs.getString("categoriaProduto"), rs.getString("marcaProduto")));
+                    rs.getFloat("valorProduto"),categoriaDAO.ListaCategoriaPorCodigo(rs.getInt("categoriaProduto"))));
         } 
         pst.close();
         return listaProdutos;
     
-    } 
+    }    
+   
+       
+        
+    
 }

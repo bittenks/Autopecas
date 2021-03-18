@@ -16,8 +16,38 @@ public class Produto {
     private String descricaoProduto;
     private int quantidadeProduto ;
     private float valorProduto ;
-    private String categoriaProduto;
-    private String marcaProduto ;
+    private Categoria categoriaProduto;
+    private Marca marcaProduto ;
+
+    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.descricaoProduto = descricaoProduto;
+        this.quantidadeProduto = quantidadeProduto;
+        this.valorProduto = valorProduto;
+    }    
+
+    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto, Categoria categoriaProduto, Marca marcaProduto) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.descricaoProduto = descricaoProduto;
+        this.quantidadeProduto = quantidadeProduto;
+        this.valorProduto = valorProduto;
+        this.categoriaProduto = categoriaProduto;
+        this.marcaProduto = marcaProduto;
+    }
+
+    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto, Categoria categoriaProduto) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.descricaoProduto = descricaoProduto;
+        this.quantidadeProduto = quantidadeProduto;
+        this.valorProduto = valorProduto;
+        this.categoriaProduto = categoriaProduto;
+    }
+    
+
+    
 
     public int getIdProduto() {
         return idProduto;
@@ -59,38 +89,26 @@ public class Produto {
         this.valorProduto = valorProduto;
     }
 
-    public String getCategoriaProduto() {
+    public Categoria getCategoriaProduto() {
         return categoriaProduto;
     }
 
-    public void setCategoriaProduto(String categoriaProduto) {
+    public void setCategoriaProduto(Categoria categoriaProduto) {
         this.categoriaProduto = categoriaProduto;
     }
 
-    public String getMarcaProduto() {
+    public Marca getMarcaProduto() {
         return marcaProduto;
     }
 
-    public void setMarcaProduto(String marcaProduto) {
+    public void setMarcaProduto(Marca marcaProduto) {
         this.marcaProduto = marcaProduto;
     }
 
-    
-     public Produto (){
-         
-     }
+          
              
-             
-    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto, String categoriaProduto, String marcaProduto) {
-        this.idProduto = idProduto;
-        this.nomeProduto = nomeProduto;
-        this.descricaoProduto = descricaoProduto;
-        this.quantidadeProduto = quantidadeProduto;
-        this.valorProduto = valorProduto;
-        this.categoriaProduto = categoriaProduto;
-        this.marcaProduto = marcaProduto;
-    }
-    
+    public Produto() {
+    } 
    
 
   

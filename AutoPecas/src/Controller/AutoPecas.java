@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import View.LoginView;
 import View.Principal;
 
 /**
@@ -14,6 +15,7 @@ import View.Principal;
 public class AutoPecas {
     
     public static void main (String[] args) {
-        Principal principal = new Principal();
+        //Principal principal = new Principal();
+        LoginView loginView = new LoginView();
     }
 }

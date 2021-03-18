@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Funcionario;
 import javax.swing.JFrame;
 
 /**
@@ -16,10 +17,14 @@ public class Principal extends javax.swing.JFrame {
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public Principal(Funcionario funcionario) {
         initComponents();
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
+        if(funcionario.getFuncaoUsuario().equals("vendedor")){
+            jmiCadastrarFuncionarios.setVisible(false);
+        }
     }
 
     /**
@@ -41,6 +46,7 @@ public class Principal extends javax.swing.JFrame {
         jmiCadastrarCliente = new javax.swing.JMenuItem();
         jmiCadastrarProdutos = new javax.swing.JMenuItem();
         jmiCadastrarFuncionarios = new javax.swing.JMenuItem();
+        jmiCadastrarCategoria = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmiConsultarCliente = new javax.swing.JMenuItem();
         jmiConsultarProdutos = new javax.swing.JMenuItem();
@@ -113,6 +119,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jmiCadastrarFuncionarios);
+
+        jmiCadastrarCategoria.setText("Cadastrar Categoria");
+        jmiCadastrarCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCadastrarCategoriaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmiCadastrarCategoria);
 
         jMenuBar1.add(jMenu4);
 
@@ -189,6 +203,13 @@ public class Principal extends javax.swing.JFrame {
         pnlPrincipal.updateUI();
     }//GEN-LAST:event_jmiCadastrarFuncionariosActionPerformed
 
+    private void jmiCadastrarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastrarCategoriaActionPerformed
+        CategoriaView categoria = new CategoriaView();
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(categoria);
+        pnlPrincipal.updateUI();
+    }//GEN-LAST:event_jmiCadastrarCategoriaActionPerformed
+
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -198,6 +219,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jmiCadastrarCategoria;
     private javax.swing.JMenuItem jmiCadastrarCliente;
     private javax.swing.JMenuItem jmiCadastrarFuncionarios;
     private javax.swing.JMenuItem jmiCadastrarProdutos;

@@ -244,24 +244,20 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnSalvar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
                                         .addComponent(jLabel65)
                                         .addGap(53, 53, 53)
                                         .addComponent(jLabel66)
                                         .addGap(75, 75, 75)
-                                        .addComponent(jLabel67)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(jLabel67)))
                                 .addGap(727, 727, 727)
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                                        .addComponent(btnAlterar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18))
+                                    .addComponent(btnAlterar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
                                         .addGap(33, 33, 33)
-                                        .addComponent(jLabel68)
-                                        .addGap(46, 46, 46)))
+                                        .addComponent(jLabel68)))
+                                .addGap(18, 18, 18)
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
                                         .addGap(8, 8, 8)
@@ -325,12 +321,13 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                     .addComponent(txtFuncaoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSenhaUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovo4)
-                    .addComponent(btnExcluir4)
+                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAlterar4)
                     .addComponent(btnSalvar4)
-                    .addComponent(btnCancelar4))
+                    .addComponent(btnCancelar4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnNovo4)
+                        .addComponent(btnExcluir4)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel65)
@@ -410,7 +407,7 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
             || txtTelefoneUsuario4.getText().isEmpty() || txtEmailUsuario4.getText().isEmpty() || txtSenhaUsuario4.getText().isEmpty()
             || txtFuncaoUsuario4.getText().isEmpty() ){
             JOptionPane.showMessageDialog(null, "Preencha todos os campos!!!");
-            txtNomeUsuario.requestFocusInWindow();
+            txtNomeUsuario4.requestFocusInWindow();
         } else{
             funcionario = new Funcionario();
             funcionario.setNomeUsuario(txtNomeUsuario4.getText());
@@ -512,92 +509,15 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Senha;
-    private javax.swing.JLabel Senha1;
-    private javax.swing.JLabel Senha2;
-    private javax.swing.JLabel Senha3;
     private javax.swing.JLabel Senha4;
-    private javax.swing.JButton btnAlterar;
-    private javax.swing.JButton btnAlterar1;
-    private javax.swing.JButton btnAlterar2;
-    private javax.swing.JButton btnAlterar3;
     private javax.swing.JButton btnAlterar4;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCancelar1;
-    private javax.swing.JButton btnCancelar2;
-    private javax.swing.JButton btnCancelar3;
     private javax.swing.JButton btnCancelar4;
-    private javax.swing.JButton btnExcluir;
-    private javax.swing.JButton btnExcluir1;
-    private javax.swing.JButton btnExcluir2;
-    private javax.swing.JButton btnExcluir3;
     private javax.swing.JButton btnExcluir4;
-    private javax.swing.JButton btnNovo;
-    private javax.swing.JButton btnNovo1;
-    private javax.swing.JButton btnNovo2;
-    private javax.swing.JButton btnNovo3;
     private javax.swing.JButton btnNovo4;
-    private javax.swing.JButton btnSalvar;
-    private javax.swing.JButton btnSalvar1;
-    private javax.swing.JButton btnSalvar2;
-    private javax.swing.JButton btnSalvar3;
     private javax.swing.JButton btnSalvar4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
@@ -608,64 +528,17 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlPrincipal1;
-    private javax.swing.JPanel pnlPrincipal2;
-    private javax.swing.JPanel pnlPrincipal3;
     private javax.swing.JPanel pnlPrincipal4;
-    private javax.swing.JTable tblFuncionario;
-    private javax.swing.JTable tblFuncionario1;
-    private javax.swing.JTable tblFuncionario2;
-    private javax.swing.JTable tblFuncionario3;
     private javax.swing.JTable tblFuncionario4;
-    private javax.swing.JTextField txtCodigoUsuario;
-    private javax.swing.JTextField txtCodigoUsuario1;
-    private javax.swing.JTextField txtCodigoUsuario2;
-    private javax.swing.JTextField txtCodigoUsuario3;
     private javax.swing.JTextField txtCodigoUsuario4;
-    private javax.swing.JTextField txtCpfUsuario;
-    private javax.swing.JTextField txtCpfUsuario1;
-    private javax.swing.JTextField txtCpfUsuario2;
-    private javax.swing.JTextField txtCpfUsuario3;
     private javax.swing.JTextField txtCpfUsuario4;
-    private javax.swing.JTextField txtEmailUsuario;
-    private javax.swing.JTextField txtEmailUsuario1;
-    private javax.swing.JTextField txtEmailUsuario2;
-    private javax.swing.JTextField txtEmailUsuario3;
     private javax.swing.JTextField txtEmailUsuario4;
-    private javax.swing.JTextField txtEnderecoUsuario;
-    private javax.swing.JTextField txtEnderecoUsuario1;
-    private javax.swing.JTextField txtEnderecoUsuario2;
-    private javax.swing.JTextField txtEnderecoUsuario3;
     private javax.swing.JTextField txtEnderecoUsuario4;
-    private javax.swing.JTextField txtFuncaoUsuario;
-    private javax.swing.JTextField txtFuncaoUsuario1;
-    private javax.swing.JTextField txtFuncaoUsuario2;
-    private javax.swing.JTextField txtFuncaoUsuario3;
     private javax.swing.JTextField txtFuncaoUsuario4;
-    private javax.swing.JTextField txtNomeUsuario;
-    private javax.swing.JTextField txtNomeUsuario1;
-    private javax.swing.JTextField txtNomeUsuario2;
-    private javax.swing.JTextField txtNomeUsuario3;
     private javax.swing.JTextField txtNomeUsuario4;
-    private javax.swing.JPasswordField txtSenhaUsuario;
-    private javax.swing.JPasswordField txtSenhaUsuario1;
-    private javax.swing.JPasswordField txtSenhaUsuario2;
-    private javax.swing.JPasswordField txtSenhaUsuario3;
     private javax.swing.JPasswordField txtSenhaUsuario4;
-    private javax.swing.JTextField txtTelefoneUsuario;
-    private javax.swing.JTextField txtTelefoneUsuario1;
-    private javax.swing.JTextField txtTelefoneUsuario2;
-    private javax.swing.JTextField txtTelefoneUsuario3;
     private javax.swing.JTextField txtTelefoneUsuario4;
     // End of variables declaration//GEN-END:variables
 

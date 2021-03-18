@@ -91,6 +91,11 @@ public class ClienteView extends javax.swing.JInternalFrame {
         txtIdCliente.setEnabled(false);
 
         txtNomeCliente.setEnabled(false);
+        txtNomeCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeClienteActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setText("Nome");
@@ -99,6 +104,11 @@ public class ClienteView extends javax.swing.JInternalFrame {
         jLabel3.setText("CPF");
 
         txtEmailCliente.setEnabled(false);
+        txtEmailCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailClienteActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setText("Email");
@@ -279,12 +289,10 @@ public class ClienteView extends javax.swing.JInternalFrame {
                                                 .addGap(18, 18, 18)))))
                                 .addGap(188, 188, 188)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(0, 422, Short.MAX_VALUE))
+                                    .addComponent(jLabel5)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel10))
-                                .addGap(28, 28, 28)
+                                .addGap(28, 440, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(64, 64, 64)
@@ -397,19 +405,21 @@ public class ClienteView extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtLimiteCreditoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovoCliente)
-                    .addComponent(btnSalvarCliente)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalvarCliente, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnAlterarCliente)
-                    .addComponent(btnExcluirCliente)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnCancelar)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnNovoCliente)
+                        .addComponent(btnExcluirCliente)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel17))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel14)
+                        .addComponent(jLabel18)
+                        .addComponent(jLabel15)
+                        .addComponent(jLabel17)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -531,6 +541,14 @@ public class ClienteView extends javax.swing.JInternalFrame {
         preparaSalvareCancelar();
         desativaCampos();
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void txtNomeClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeClienteActionPerformed
+
+    private void txtEmailClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailClienteActionPerformed
            
     public void atualizarTabelaCliente(){
         cliente = new Cliente();
