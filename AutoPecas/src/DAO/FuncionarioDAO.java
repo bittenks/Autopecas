@@ -92,7 +92,6 @@ public class FuncionarioDAO {
     } 
     
     public Funcionario buscaLogin( String emailUsuario, String senhaUsuario) throws SQLException{
-        //sql = "Select * from usuario where emailUsuario COLLATE utf8_bin=? and senhaUsuario COLLATE utf8_bin=?";
         sql = "Select * from usuario where emailUsuario COLLATE utf8mb4_bin=? and senhaUsuario COLLATE utf8mb4_bin=?";
         Funcionario funcionario= null;
         pst= Conexao.getInstance().prepareStatement(sql);

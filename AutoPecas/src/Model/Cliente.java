@@ -24,8 +24,6 @@ public class Cliente {
     private String cepCliente;
     private float limite_creditoCliente;
 
-
-
     public int getIdCliente() {
         return idCliente;
     }
@@ -139,6 +137,10 @@ public class Cliente {
 
     public Cliente() {
     }
+
+
+
+    
 
     
     

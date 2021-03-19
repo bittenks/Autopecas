@@ -7,6 +7,19 @@ package View;
 
 import DAO.FuncionarioDAO;
 import Model.Funcionario;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Element;
+import com.lowagie.text.Font;
+import com.lowagie.text.PageSize;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfPCell;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +39,7 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
         Funcionario funcionario;
         FuncionarioDAO funcionarioDAO;
         List<Funcionario> listaFuncionarios;
+        Document doc;
     /**
      * Creates new form FuncionarioView
      */
@@ -77,6 +91,8 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
         jLabel69 = new javax.swing.JLabel();
         txtSenhaUsuario4 = new javax.swing.JPasswordField();
         jLabel70 = new javax.swing.JLabel();
+        btnRelatorioFunc = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(1360, 898));
@@ -198,6 +214,16 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
 
         jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/funcionarios.png"))); // NOI18N
 
+        btnRelatorioFunc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/relatorio.png"))); // NOI18N
+        btnRelatorioFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRelatorioFuncActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setText("Relatório");
+
         javax.swing.GroupLayout pnlPrincipal4Layout = new javax.swing.GroupLayout(pnlPrincipal4);
         pnlPrincipal4.setLayout(pnlPrincipal4Layout);
         pnlPrincipal4Layout.setHorizontalGroup(
@@ -219,7 +245,7 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                         .addGap(204, 204, 204))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipal4Layout.createSequentialGroup()
                         .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlPrincipal4Layout.createSequentialGroup()
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -240,18 +266,22 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlPrincipal4Layout.createSequentialGroup()
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                                        .addComponent(btnNovo4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnSalvar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
                                         .addComponent(jLabel65)
                                         .addGap(53, 53, 53)
                                         .addComponent(jLabel66)
                                         .addGap(75, 75, 75)
-                                        .addComponent(jLabel67)))
-                                .addGap(727, 727, 727)
+                                        .addComponent(jLabel67)
+                                        .addGap(61, 61, 61)
+                                        .addComponent(jLabel1))
+                                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
+                                        .addComponent(btnNovo4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnSalvar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnRelatorioFunc, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(609, 609, 609)
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnAlterar4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
@@ -321,10 +351,11 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                     .addComponent(txtFuncaoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSenhaUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAlterar4)
-                    .addComponent(btnSalvar4)
-                    .addComponent(btnCancelar4, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnRelatorioFunc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAlterar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSalvar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancelar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnNovo4)
                         .addComponent(btnExcluir4)))
@@ -334,9 +365,10 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                     .addComponent(jLabel66)
                     .addComponent(jLabel67)
                     .addComponent(jLabel68)
-                    .addComponent(jLabel69))
+                    .addComponent(jLabel69)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -457,6 +489,111 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
         limpaCamposFuncionario();
     }//GEN-LAST:event_btnNovoActionPerformed
 
+    private void btnRelatorioFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRelatorioFuncActionPerformed
+        String nomediretorio = null;
+        String nomepasta = "Relatorio_Funcionario";
+        String separador = java.io.File.separator;
+        try {
+            nomediretorio = "C:" + separador + nomepasta;
+            if (!new File(nomediretorio).exists()) {
+                (new File(nomediretorio)).mkdir();
+            }
+            gerarDocumento();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
+        
+        
+
+       public void gerarDocumento() {
+        try {
+            List<Funcionario> lista = new ArrayList<>();
+            lista = funcionarioDAO.ListaFuncionario();
+            doc = new Document(PageSize.A4, 41.5f, 41.5f, 55.2f, 55.2f);
+            PdfWriter.getInstance(doc, new FileOutputStream("C:/Relatorio_Funcionario/RelatorioFuncionario" + ".pdf"));
+            doc.open();
+            
+            Font f1 = new Font(Font.HELVETICA, 14, Font.BOLD);
+            Font f2 = new Font(Font.HELVETICA, 12, Font.BOLD);
+            Font f3 = new Font(Font.HELVETICA, 12, Font.NORMAL);
+            Font f4 = new Font(Font.HELVETICA, 10, Font.BOLD);
+            Font f5 = new Font(Font.HELVETICA, 10, Font.NORMAL);
+            
+            Paragraph titulo1 = new Paragraph("Sistemas de Gestão - Auto Peças", f2);
+            titulo1.setAlignment(Element.ALIGN_CENTER);
+            titulo1.setSpacingAfter(10);
+            
+            Paragraph titulo2 = new Paragraph("Relatório de Funcionários", f1);
+            titulo2.setAlignment(Element.ALIGN_CENTER);
+            titulo2.setSpacingAfter(0);
+            
+            PdfPTable tabela = new PdfPTable(new float[]{0.25f, 0.25f, 0.25f});
+            tabela.setHorizontalAlignment(Element.ALIGN_CENTER);
+            tabela.setWidthPercentage(100f);
+            
+            PdfPCell cabecalho1 = new PdfPCell(new Paragraph("Nome", f3));
+            //cabecalho1.setBackgroundColor(new Color(0xc0, 0xc0, 0xc0));
+            cabecalho1.setHorizontalAlignment(Element.ALIGN_JUSTIFIED);
+            cabecalho1.setBorder(0);
+            
+            PdfPCell cabecalho2 = new PdfPCell(new Paragraph("CPF", f3));
+            //cabecalho2.setBackgroundColor(new Color(0xc0, 0xc0, 0xc0));
+            cabecalho2.setHorizontalAlignment(Element.ALIGN_JUSTIFIED);
+            cabecalho2.setBorder(0);
+            
+            PdfPCell cabecalho3 = new PdfPCell(new Paragraph("Função", f3));
+            //cabecalho2.setBackgroundColor(new Color(0xc0, 0xc0, 0xc0));
+            cabecalho3.setHorizontalAlignment(Element.ALIGN_JUSTIFIED);
+            cabecalho3.setBorder(0);
+            
+            
+            tabela.addCell(cabecalho1);
+            tabela.addCell(cabecalho2);
+            tabela.addCell(cabecalho3);
+            
+            for (Funcionario funcionario : lista) {
+                Paragraph p1 = new Paragraph(funcionario.getNomeUsuario(), f5);
+                p1.setAlignment(Element.ALIGN_JUSTIFIED);
+                PdfPCell col1 = new PdfPCell(p1);
+                col1.setBorder(0);
+                
+                Paragraph p2 = new Paragraph(funcionario.getCpfUsuario(), f5);
+                p2.setAlignment(Element.ALIGN_JUSTIFIED);
+                PdfPCell col2 = new PdfPCell(p2);
+                col2.setBorder(0);
+                
+                Paragraph p3 = new Paragraph(funcionario.getFuncaoUsuario(), f5);
+                p3.setAlignment(Element.ALIGN_JUSTIFIED);
+                PdfPCell col3 = new PdfPCell(p3);
+                col3.setBorder(0);
+                
+                tabela.addCell(col1);
+                tabela.addCell(col2);
+                tabela.addCell(col3);
+
+            }
+            doc.add(titulo2);
+            doc.add(titulo1);
+            doc.add(tabela);
+            doc.close();
+            
+            JOptionPane.showMessageDialog(null, "Relatório Salvo com Sucesso!!!");
+            String caminho = "C:/Relatorio_Funcionario/RelatorioFuncionario.pdf";
+            Desktop.getDesktop().open(new File(caminho));
+            
+        }catch (DocumentException e) {
+            e.printStackTrace();
+        }catch (SQLException ex) {
+            ex.printStackTrace();
+        }catch (IOException exx) {
+            exx.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Relatório de Funcionário Aberto!!! Feche Para Gerar um Novo!!!");
+        }
+       
+    
+    }//GEN-LAST:event_btnRelatorioFuncActionPerformed
+
     public void atualizarTabelaFuncionario(){
         funcionario = new Funcionario();
             try {
@@ -514,7 +651,9 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCancelar4;
     private javax.swing.JButton btnExcluir4;
     private javax.swing.JButton btnNovo4;
+    private javax.swing.JButton btnRelatorioFunc;
     private javax.swing.JButton btnSalvar4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;

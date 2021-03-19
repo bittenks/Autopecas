@@ -25,7 +25,7 @@ public class Conexao implements Serializable {
     private Conexao() {
         // Altere o usuário e senha de acordo com o banco de dados instalado
         usuario = "root";
-        senha = "Andre*01";
+        senha = "";
         
         // Defina aqui o nome do seu banco de dados
         url = "jdbc:mysql://localhost:3306/autopecas";
