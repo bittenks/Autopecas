@@ -23,8 +23,12 @@ public class Principal extends javax.swing.JFrame {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         
         if(funcionario.getFuncaoUsuario().equals("vendedor")){
+            jmiCadastrarProdutos.setVisible(false);
             jmiCadastrarFuncionarios.setVisible(false);
+            jmiCadastrarCategoria.setVisible(false);
+            jmiCadastrarMarca.setVisible(false);
         }
+        
     }
 
     /**
