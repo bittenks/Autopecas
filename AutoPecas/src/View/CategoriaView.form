@@ -120,6 +120,9 @@
     <Component class="javax.swing.JTextField" name="txtIdCategoriaView">
     </Component>
     <Component class="javax.swing.JTextField" name="txtCategoriaView">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCategoriaViewActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

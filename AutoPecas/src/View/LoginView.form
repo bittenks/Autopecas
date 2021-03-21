@@ -26,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -35,9 +35,9 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblErro" min="-2" pref="171" max="-2" attributes="0"/>
-                      <EmptySpace pref="113" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="lblErro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="241" max="32767" attributes="0"/>
                       <Component id="btnLogin" min="-2" pref="111" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                   </Group>
@@ -58,8 +58,8 @@
               <Component id="txtSenha" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="55" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblErro" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErro" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
           </Group>
@@ -79,8 +79,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtLogin">
     </Component>
-    <Component class="javax.swing.JTextField" name="lblErro">
-    </Component>
     <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
         <Property name="text" type="java.lang.String" value="Login"/>
@@ -90,6 +88,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtSenha">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblErro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Status"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

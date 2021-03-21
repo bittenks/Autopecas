@@ -47,6 +47,7 @@ public class Principal extends javax.swing.JFrame {
         jmiCadastrarProdutos = new javax.swing.JMenuItem();
         jmiCadastrarFuncionarios = new javax.swing.JMenuItem();
         jmiCadastrarCategoria = new javax.swing.JMenuItem();
+        jmiCadastrarMarca = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jmiConsultarCliente = new javax.swing.JMenuItem();
         jmiConsultarProdutos = new javax.swing.JMenuItem();
@@ -127,6 +128,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jmiCadastrarCategoria);
+
+        jmiCadastrarMarca.setText("Cadastrar Marca");
+        jmiCadastrarMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCadastrarMarcaActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jmiCadastrarMarca);
 
         jMenuBar1.add(jMenu4);
 
@@ -210,6 +219,13 @@ public class Principal extends javax.swing.JFrame {
         pnlPrincipal.updateUI();
     }//GEN-LAST:event_jmiCadastrarCategoriaActionPerformed
 
+    private void jmiCadastrarMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastrarMarcaActionPerformed
+        MarcaView marca = new MarcaView();
+        pnlPrincipal.removeAll();
+        pnlPrincipal.add(marca);
+        pnlPrincipal.updateUI();
+    }//GEN-LAST:event_jmiCadastrarMarcaActionPerformed
+
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -222,6 +238,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiCadastrarCategoria;
     private javax.swing.JMenuItem jmiCadastrarCliente;
     private javax.swing.JMenuItem jmiCadastrarFuncionarios;
+    private javax.swing.JMenuItem jmiCadastrarMarca;
     private javax.swing.JMenuItem jmiCadastrarProdutos;
     private javax.swing.JMenuItem jmiConsultarCliente;
     private javax.swing.JMenuItem jmiConsultarFuncionarios;

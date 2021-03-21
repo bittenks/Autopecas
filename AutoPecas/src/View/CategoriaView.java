@@ -65,6 +65,12 @@ public class CategoriaView extends javax.swing.JInternalFrame {
 
         jLabel2.setText("Categoria");
 
+        txtCategoriaView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCategoriaViewActionPerformed(evt);
+            }
+        });
+
         tblCategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -242,6 +248,10 @@ public class CategoriaView extends javax.swing.JInternalFrame {
         txtCategoriaView.setText(tblCategoria.getValueAt(tblCategoria.getSelectedRow(), 1).toString());
         preparaSelecaoTabela();
     }//GEN-LAST:event_tblCategoriaMouseClicked
+
+    private void txtCategoriaViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCategoriaViewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCategoriaViewActionPerformed
 
     
     public void atualizarTabelaProduto(){
