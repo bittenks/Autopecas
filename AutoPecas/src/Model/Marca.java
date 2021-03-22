@@ -13,6 +13,9 @@ public class Marca {
     private int idmarcaProd;
     private String descricao;
 
+    public Marca() {
+    }
+
     public Marca(int idmarcaProd, String descricao) {
         this.idmarcaProd = idmarcaProd;
         this.descricao = descricao;
