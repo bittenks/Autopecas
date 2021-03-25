@@ -33,8 +33,10 @@ create table produto(
     descricaoProduto varchar(150) not null,
     quantidadeProduto int(10) not null,
     valorProduto decimal(10,2) not null,
-    categoriaProduto varchar(50) not null,
-    marcaProduto varchar (50) not null,
+    categoriaProduto int(5) ,
+    marcaProduto int (5),
+    foreign key(categoriaProduto) references categoriaProd(idcategoriaProd),
+    foreign key(marcaProduto) references marcaProd(idmarcaProd)
    );
 
 create table categoriaProd(
@@ -45,22 +47,51 @@ create table marcaProd(
 	idmarcaProd int(4) auto_increment not null primary key,
     descricao varchar(45) 
 );
-ALTER TABLE `autopecas`.`produto` 
-ADD INDEX `categoriaProduto_idx` (`categoriaProduto` ASC) VISIBLE;
-;
-ALTER TABLE `autopecas`.`produto` 
-ADD CONSTRAINT `categoriaProduto`
-  FOREIGN KEY (`categoriaProduto`)
-  REFERENCES `autopecas`.`categoriaprod` (`idCategoriaProd`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
+create table prod_Estoque(
+	idEstoque int(4) auto_increment not null primary key,
+	fk_idProdutoEstoque int(4),
+    dataEstoque date,
+    quantidadeEstoque int(10),
+    num_nota_fiscalEstoque varchar(20),
+	foreign key(fk_idProdutoEstoque) references produto(idProduto)
+);
 
-ALTER TABLE `autopecas`.`produto` 
-ADD INDEX `marcaProduto_idx` (`marcaProduto` ASC) VISIBLE;
-;
-ALTER TABLE `autopecas`.`produto` 
-ADD CONSTRAINT `marcaProduto`
-  FOREIGN KEY (`marcaProduto`)
-  REFERENCES `autopecas`.`marcaprod` (`idmarcaProd`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
+create table prod_Venda(
+	idVenda int(4) auto_increment not null primary key,
+    fk_idProdutoVenda int(4), 
+    fk_idClienteVenda int(4),
+    fk_idUsuarioVenda int(4),
+    dataVenda date,    
+    valor_comissaoVenda float,
+    valor_unitarioVenda float,
+    valor_descontoVenda float,
+    valor_totalVenda float,
+    foreign key(fk_idProdutoVenda) references produto(idProduto),
+    foreign key(fk_idClienteVenda) references cliente(idCliente),
+    foreign key(fk_idUsuarioVenda) references usuario(idUsuario)
+);
+
+create table itemvenda(
+id_ItemVenda int(5) auto_increment,
+id_venda int(5),
+id_Produto int(5),
+quantidade float(5,0),
+precoitem float(7,2),
+totalitem float(7,2),
+primary key (id_ItemVenda),
+foreign key(id_venda) references venda(id_Venda),
+foreign key(id_Produto) references produto(idProduto)
+);
+
+
+
+create table venda(
+id_Venda int(5) auto_increment,
+id_Cliente int(5),
+id_Usuario int(5),
+totalVenda float(7,2),
+primary key (id_Venda),
+foreign key(id_Cliente) references cliente(idCliente),
+foreign key(id_Usuario) references usuario(idUsuario)
+);
+);
