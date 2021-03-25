@@ -55,22 +55,6 @@ create table prod_Estoque(
     num_nota_fiscalEstoque varchar(20),
 	foreign key(fk_idProdutoEstoque) references produto(idProduto)
 );
-
-create table prod_Venda(
-	idVenda int(4) auto_increment not null primary key,
-    fk_idProdutoVenda int(4), 
-    fk_idClienteVenda int(4),
-    fk_idUsuarioVenda int(4),
-    dataVenda date,    
-    valor_comissaoVenda float,
-    valor_unitarioVenda float,
-    valor_descontoVenda float,
-    valor_totalVenda float,
-    foreign key(fk_idProdutoVenda) references produto(idProduto),
-    foreign key(fk_idClienteVenda) references cliente(idCliente),
-    foreign key(fk_idUsuarioVenda) references usuario(idUsuario)
-);
-
 create table itemvenda(
 id_ItemVenda int(5) auto_increment,
 id_venda int(5),
@@ -82,9 +66,6 @@ primary key (id_ItemVenda),
 foreign key(id_venda) references venda(id_Venda),
 foreign key(id_Produto) references produto(idProduto)
 );
-
-
-
 create table venda(
 id_Venda int(5) auto_increment,
 id_Cliente int(5),
@@ -93,5 +74,4 @@ totalVenda float(7,2),
 primary key (id_Venda),
 foreign key(id_Cliente) references cliente(idCliente),
 foreign key(id_Usuario) references usuario(idUsuario)
-);
 );
