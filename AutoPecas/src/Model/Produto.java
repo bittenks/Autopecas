@@ -18,14 +18,7 @@ public class Produto {
     private float valorProduto ;
     private Categoria categoriaProduto;
     private Marca marcaProduto ;
-
-    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto) {
-        this.idProduto = idProduto;
-        this.nomeProduto = nomeProduto;
-        this.descricaoProduto = descricaoProduto;
-        this.quantidadeProduto = quantidadeProduto;
-        this.valorProduto = valorProduto;
-    }    
+    
 
     public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto, Categoria categoriaProduto, Marca marcaProduto) {
         this.idProduto = idProduto;
@@ -35,15 +28,6 @@ public class Produto {
         this.valorProduto = valorProduto;
         this.categoriaProduto = categoriaProduto;
         this.marcaProduto = marcaProduto;
-    }
-
-    public Produto(int idProduto, String nomeProduto, String descricaoProduto, int quantidadeProduto, float valorProduto, Categoria categoriaProduto) {
-        this.idProduto = idProduto;
-        this.nomeProduto = nomeProduto;
-        this.descricaoProduto = descricaoProduto;
-        this.quantidadeProduto = quantidadeProduto;
-        this.valorProduto = valorProduto;
-        this.categoriaProduto = categoriaProduto;
     }
     
 
@@ -109,9 +93,18 @@ public class Produto {
              
     public Produto() {
     } 
+
+    public Produto(int idProduto, String nomeProduto, int quantidadeProduto, float valorProduto, Categoria categoriaProduto, Marca marcaProduto) {
+        this.idProduto = idProduto;
+        this.nomeProduto = nomeProduto;
+        this.quantidadeProduto = quantidadeProduto;
+        this.valorProduto = valorProduto;
+        this.categoriaProduto = categoriaProduto;
+        this.marcaProduto = marcaProduto;
+    }
    
 
-  
+    
   
     
     

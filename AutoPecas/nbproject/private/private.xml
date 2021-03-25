@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/DAO/FuncionarioDAO.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/VendasView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/ProdutoView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/CategoriaView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/FuncionarioView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/ClienteView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/Principal.java</file>
             <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/LoginView.java</file>
+            <file>file:/D:/AutoPecas/Autopecas/AutoPecas/src/View/MarcaView.java</file>
         </group>
     </open-files>
 </project-private>

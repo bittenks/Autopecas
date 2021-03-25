@@ -99,4 +99,18 @@ public class ClienteDAO {
         return listaClientes;
     
     } 
+    
+    public List<Cliente> ListaClienteNome(String nomeCliente) throws SQLException{
+        List <Cliente> listaClientes;
+        listaClientes = new ArrayList<>();
+        sql = "select * from cliente where nomeCliente like '%" + nomeCliente + "%'";
+        pst = Conexao.getInstance().prepareStatement(sql);
+        ResultSet rs = pst.executeQuery();
+        while (rs.next()){
+            listaClientes.add(new Cliente (rs.getInt("idCliente"), rs.getString("nomeCliente"), rs.getString("cpfCliente"),
+            rs.getString("telCliente")));
+        }
+        pst.close();
+        return listaClientes;
+    }
 }

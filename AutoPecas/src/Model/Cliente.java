@@ -138,6 +138,15 @@ public class Cliente {
     public Cliente() {
     }
 
+    public Cliente(int idCliente, String nomeCliente, String cpfCliente, String telCliente) {
+        this.idCliente = idCliente;
+        this.nomeCliente = nomeCliente;
+        this.cpfCliente = cpfCliente;
+        this.telCliente = telCliente;
+    }
+    
+    
+
 
 
     

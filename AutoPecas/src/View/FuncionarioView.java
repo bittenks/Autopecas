@@ -167,7 +167,7 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
         });
 
         jLabel64.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel64.setText("Funcionários");
+        jLabel64.setText("FUNCIONÁRIOS");
 
         tblFuncionario4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -234,18 +234,9 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
                         .addComponent(txtNomeUsuario4)
                         .addContainerGap())
-                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                        .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCodigoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel57))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel64)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel70)
-                        .addGap(204, 204, 204))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipal4Layout.createSequentialGroup()
                         .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1324, Short.MAX_VALUE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1320, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlPrincipal4Layout.createSequentialGroup()
                                 .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -305,24 +296,34 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel63)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(txtFuncaoUsuario4))))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
+                        .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlPrincipal4Layout.createSequentialGroup()
+                                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCodigoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel57))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipal4Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel64)
+                                .addGap(131, 131, 131)))
+                        .addComponent(jLabel70)
+                        .addGap(285, 285, 285))))
         );
         pnlPrincipal4Layout.setVerticalGroup(
             pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(pnlPrincipal4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addComponent(jLabel64)
+                        .addGap(15, 15, 15)
                         .addComponent(jLabel57)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCodigoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel64))
-                    .addGroup(pnlPrincipal4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel70)))
-                .addGap(44, 44, 44)
+                        .addComponent(txtCodigoUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel58)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNomeUsuario4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -368,7 +369,7 @@ public class FuncionarioView extends javax.swing.JInternalFrame {
                     .addComponent(jLabel69)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
